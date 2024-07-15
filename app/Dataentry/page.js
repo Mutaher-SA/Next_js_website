@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Dataentry } from '../components/Dataentry';
+import { ToastMessage } from '../components/ToastMessage'; // Ensure correct import
 
 const DataEntryPage = () => {
   const router = useRouter();
@@ -43,7 +44,9 @@ const DataEntryPage = () => {
 
   return (
     <div>
-      <Dataentry handleSubmit={handleSubmit} errorMessage={errorMessage} isEmptyError={isEmptyError} />
+      {isEmptyError && <ToastMessage type="warning" message="Can't send empty data" />}
+      {errorMessage && <ToastMessage type="error" message={errorMessage} />}
+      <Dataentry handleSubmit={handleSubmit} />
     </div>
   );
 };
