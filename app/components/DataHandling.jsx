@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const DataHandling = (theUrl) => {
+export const DataHandling = (theUrl) => {
   const [posts, setPosts] = useState(null);
   const [connServerError, setConnServerError] = useState(null);
   const [isWaitingData, setIsWaitingData] = useState(true);
@@ -28,4 +28,4 @@ const DataHandling = (theUrl) => {
   return { isWaitingData, connServerError, posts };
 };
 
-export default DataHandling;
+

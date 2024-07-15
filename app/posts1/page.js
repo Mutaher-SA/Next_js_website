@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
-import TableEmp from "../components/TableEmp";
-import DataHandling from "../components/DataHandling";
-import { Loadingscreen } from "../components/loadingscreen";
+import { TableEmp } from "../components/TableEmp";
+import { DataHandling } from "../components/DataHandling";
+import { Loadingscreen } from "../components/Loadingscreen.jsx";
 
 const Posts = () => {
   const { isWaitingData, connServerError, posts: fetchedPosts } = DataHandling('https://jsonplaceholder.typicode.com/posts');

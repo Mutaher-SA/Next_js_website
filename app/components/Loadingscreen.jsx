@@ -11,5 +11,5 @@ export const Loadingscreen = () => {
             Loading...
         </button>
     </div>
-  )
-}
+  );
+};

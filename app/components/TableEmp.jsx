@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TableEmp = ({ posts, tableName, DeleteEmp }) => {
+export const TableEmp = ({ posts, tableName, DeleteEmp }) => {
     return (
     <div className="container mx-auto py-7 md:py-10 lg:py-24">
         <div className="container mx-auto py-7 md:py-10 lg:py-10">
@@ -40,4 +40,4 @@ const TableEmp = ({ posts, tableName, DeleteEmp }) => {
     );
 };
 
-export default TableEmp;
+
